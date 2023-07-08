@@ -8,18 +8,30 @@
 <body>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-
-    <div class="card text-center mx-auto" style="width: 18rem;">
-        <div class="card-body font-weight-bold">
-          <div class="card-front">
-            What is the capital of France?
-          </div>
-          <div class="card-back" >
-            Paris
-          </div>
-        </div>
+    <div id="export">
+      <p>Usage :use arrow keys to navigate, Right key to next card.
+        <br>
+        UP/Down arrow to flip the card and see the answer. 
+        <br>
+        Note: See the answer only when you dont recall the answer.when you see the answer the corresponsing word is repeated often. 
+        <br>
+        Atlast, use the export button to export the json, which you can use next time you use the app. it includes words that you couldn't recollect.
+      </p>
+      <button onclick="exportJSONToFile(flashcards, 'export.json')">Export</button>
     </div>
-    <input type="file" name="Import" id="import">
+    <div class="card text-center mx-auto" style="width: 18rem;">
+      <div class="card-body font-weight-bold">
+        <div class="card-front">
+        </div>
+        <div class="card-back" >
+        </div>
+      </div>
+  </div>
+    <div id="import">
+      <h1>Please select a json file to use app</h1>
+      <input type="file" name="Import" >
+    </div>
+
 
     <style>
   .card {
@@ -57,6 +69,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
     <script>
+        $('.card').hide();
+        $('#export').hide();
         var flashcards = [
         {
             question: "What is the capital of France?",
@@ -77,19 +91,17 @@
         if (event.which == 37) {
             // Left arrow key was pressed
             // Trigger the left arrow key event here
-        } else if (event.which == 38) {
+        } else if (event.which == 38 || event.which == 40) {
             $('.card').toggleClass('flipped');
-            // Up arrow key was pressed
+            updateScore(flashcards, $('.card-front').text());
+
+            // Up or down arrow key was pressed
             // Trigger the up arrow key event here
         } else if (event.which == 39) {
             showNextCard()
             // Right arrow key was pressed
             // Trigger the right arrow key event here
-        } else if (event.which == 40) {
-            $('.card').toggleClass('flipped');
-            // Down arrow key was pressed
-            // Trigger the down arrow key event here
-        }
+        } 
         });
         function showNextCard() {
         const index = Math.floor(Math.random() * flashcards.length);
@@ -105,18 +117,73 @@
 
     input.addEventListener('change', function() {
     const file = this.files[0];
-
     if (file) {
         const reader = new FileReader();
-
         reader.addEventListener('load', function() {
         const text = this.result;  // The contents of the file are stored in the 'result' property of the FileReader object
         flashcards=JSON.parse(text);
         console.log(flashcards);
+        alert("file loaded");
+        $("#import").hide();
+        $('.card').show();
+        $('#export').show();
+        showNextCard();
         });
         reader.readAsText(file);  // Start reading the file as text
     }
     });
+
+    function export_json(){
+    
+    }
+    function exportJSONToFile(data, filename) {
+  // Convert the JSON data to a string
+  console.log("cl");
+  const jsonString = JSON.stringify(data, null, 2);
+
+  // Create a Blob object with the JSON data
+  const blob = new Blob([jsonString], { type: 'application/json' });
+
+  // Create a temporary URL for the Blob
+  const url = URL.createObjectURL(blob);
+
+  // Create a temporary link element
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = filename;
+
+  // Programmatically click the link to trigger the file download
+  document.body.appendChild(link);
+  link.click();
+
+  // Clean up the temporary objects
+  document.body.removeChild(link);
+  URL.revokeObjectURL(url);
+}
+
+function updateScore(jsonData, question) {
+  for (let i = 0; i < jsonData.length; i++) {
+    if (jsonData[i].question === question) {
+      jsonData[i].score += 1;
+      break;
+    }
+  }
+}
+// Function to display the warning message
+function displayWarning(event) {
+  // Customize the warning message according to your needs
+  var message = "You have unsaved data,Export before you leave !";
+  
+  // Assign the warning message to the event object
+  event.returnValue = message;
+  
+  // Return the warning message for older browsers
+  return message;
+}
+
+// Attach the event listener to the 'beforeunload' event
+window.addEventListener('beforeunload', displayWarning);
+
 
     </script>
 </body>

@@ -105,12 +105,10 @@
 
     $('.card').on('touchstart', function (event) {
       touchStartX = event.originalEvent.touches[0].clientX;
-      console.log(touchStartX);
     });
 
     $('.card').on('touchend', function (event) {
       touchEndX = event.originalEvent.changedTouches[0].clientX;
-      console.log(touchEndX);
 
       // Calculate the swipe distance
       var swipeDistance = touchEndX - touchStartX;
@@ -122,6 +120,13 @@
         showNextCard_flipback();
       }
     });
+    $('#myCard').on('click', function (event) {
+      // div 3 part, left right and flip
+      var cardWidth = $(this).outerWidth(); // Get the width of the card
+      var clickX = event.clientX - $(this).offset().left; // Calculate the click position relative to the card
+      if (clickX > cardWidth / 2)  showNextCard_flipback();
+    });
+
 
 
 
@@ -170,14 +175,14 @@
     //call next after flipping back if card is flipped
     function showNextCard_flipback() {
       if ($('.card').hasClass('flipped')) {
-          $('.card').removeClass('flipped');
-          setTimeout(function () {
-            showNextCard();
-          }, 200); //delay to flip back transison to complete
-        }
-        else {
+        $('.card').removeClass('flipped');
+        setTimeout(function () {
           showNextCard();
-        }
+        }, 200); //delay to flip back transison to complete
+      }
+      else {
+        showNextCard();
+      }
     }
     /* export the data to a json file and download.
     */

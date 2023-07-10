@@ -1,190 +1,237 @@
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
+
 <body>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-    <div id="export">
-      <p>Usage :use arrow keys to navigate, Right key to next card.
-        <br>
-        UP/Down arrow to flip the card and see the answer. 
-        <br>
-        Note: See the answer only when you dont recall the answer.when you see the answer the corresponsing word is repeated often. 
-        <br>
-        Atlast, use the export button to export the json, which you can use next time you use the app. it includes words that you couldn't recollect.
-      </p>
-      <button onclick="exportJSONToFile(flashcards, 'export.json')">Export</button>
-    </div>
-    <div class="card text-center mx-auto" style="width: 18rem;">
-      <div class="card-body font-weight-bold">
-        <div class="card-front">
-        </div>
-        <div class="card-back" >
-        </div>
-      </div>
+  <div id="export">
+    <p>Usage :use arrow keys to navigate, Right key to next card.
+      <br>
+      UP/Down arrow to flip the card and see the answer.
+      <br>
+      Note: See the answer only when you dont recall the answer.when you see the answer the corresponsing word is
+      repeated often.
+      <br>
+      Atlast, use the export button to export the json, which you can use next time you use the app. it includes words
+      that you couldn't recollect.
+    </p>
+    <button onclick="exportJSONToFile(flashcards, 'export.json')">Export</button>
   </div>
-    <div id="import">
-      <h1>Please select a json file to use app</h1>
-      <input type="file" name="Import" >
+  <div class="card text-center mx-auto" style="width: 18rem;">
+    <div class="card-body font-weight-bold">
+      <div class="card-front">
+      </div>
+      <div class="card-back">
+      </div>
     </div>
+  </div>
+  <div id="import">
+    <h1>Please select a json file to use app</h1>
+    <input type="file" name="Import">
+  </div>
 
 
-    <style>
-  .card {
-  perspective: 1000px; /* Add a perspective effect to the card */
-}
-
-.card-front,
-.card-back {
-  transition: all 0.6s ease; /* Add a transition effect */
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden; /* Hide the back side */
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.card-back {
-  transform: rotateX(180deg); /* Rotate the back side */
-}
-
-.card.flipped .card-front {
-  transform: rotateX(180deg); /* Rotate the front side */
-}
-
-.card.flipped .card-back {
-  transform: rotateX(0); /* Rotate the back side back to its original position */
-}
-
-
-      </style>
-   
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.16.0/dist/umd/popper.min.js" integrity="sha384-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script> -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-
-    <script>
-        $('.card').hide();
-        $('#export').hide();
-        var flashcards = [
-        {
-            question: "What is the capital of France?",
-            answer: "Paris",
-        },
-        {
-            question: "What is the currency of Japan?",
-            answer: "Yen",
-        },
-        {
-            question: "What is the highest mountain in the world?",
-            answer: "Mount Everest",
-        },
-        ];
-
-
-        $(document).keydown(function(event) {
-        if (event.which == 37) {
-            // Left arrow key was pressed
-            // Trigger the left arrow key event here
-        } else if (event.which == 38 || event.which == 40) {
-            $('.card').toggleClass('flipped');
-            updateScore(flashcards, $('.card-front').text());
-
-            // Up or down arrow key was pressed
-            // Trigger the up arrow key event here
-        } else if (event.which == 39) {
-            showNextCard()
-            // Right arrow key was pressed
-            // Trigger the right arrow key event here
-        } 
-        });
-        function showNextCard() {
-        const index = Math.floor(Math.random() * flashcards.length);
-        console.log(index)
-        // Retrieve the next flashcard from the list by random
-        const flashcard = flashcards[index];
-
-        // Update the HTML elements to display the new question and answer options
-        $('.card-front').text(flashcard.question);
-        $('.card-back').text(flashcard.answer);
+  <style>
+    .card {
+      perspective: 1000px;
+      /* Add a perspective effect to the card */
     }
-    const input = document.querySelector('input[type="file"]');
 
-    input.addEventListener('change', function() {
-    const file = this.files[0];
-    if (file) {
-        const reader = new FileReader();
-        reader.addEventListener('load', function() {
-        const text = this.result;  // The contents of the file are stored in the 'result' property of the FileReader object
-        flashcards=JSON.parse(text);
-        console.log(flashcards);
-        alert("file loaded");
-        $("#import").hide();
-        $('.card').show();
-        $('#export').show();
-        showNextCard();
-        });
-        reader.readAsText(file);  // Start reading the file as text
+    .card-front,
+    .card-back {
+      transition: all 0.6s ease;
+      /* Add a transition effect */
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      /* Hide the back side */
+      position: absolute;
+      top: 0;
+      left: 0;
     }
+
+    .card-back {
+      transform: rotateX(180deg);
+      /* Rotate the back side */
+    }
+
+    .card.flipped .card-front {
+      transform: rotateX(180deg);
+      /* Rotate the front side */
+    }
+
+    .card.flipped .card-back {
+      transform: rotateX(0);
+      /* Rotate the back side back to its original position */
+    }
+  </style>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.16.0/dist/umd/popper.min.js" integrity="sha384-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script> -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+
+  <script>
+    $('.card').hide();
+    $('#export').hide();
+    var flashcards = [
+      {
+        question: "What is the capital of France?",
+        answer: "Paris",
+      },
+      {
+        question: "What is the currency of Japan?",
+        answer: "Yen",
+      },
+      {
+        question: "What is the highest mountain in the world?",
+        answer: "Mount Everest",
+      },
+    ];
+
+    var touchStartX = 0;
+    var touchEndX = 0;
+    var minSwipeDistance = 50; // Minimum distance required to trigger swipe action
+
+    $('.card').on('touchstart', function (event) {
+      touchStartX = event.originalEvent.touches[0].clientX;
     });
 
-    function export_json(){
-    
+    $('.card').on('touchend', function (event) {
+      touchEndX = event.originalEvent.changedTouches[0].clientX;
+
+      // Calculate the swipe distance
+      var swipeDistance = touchEndX - touchStartX;
+
+      // if (swipeDistance > minSwipeDistance) - Swipe from left to right (previous card)
+
+      if (swipeDistance < -minSwipeDistance) {
+        // Swipe from right to left (next card)
+        showNextCard_flipback();
+      }
+    });
+
+
+
+    // listener when file is uploaded
+    $('input[type="file"]').on('change', function () {
+      const file = this.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.addEventListener('load', function () {
+          const text = this.result;  // The contents of the file are stored in the 'result' property of the FileReader object
+          flashcards = JSON.parse(text);
+          console.log(flashcards);
+          alert("file loaded");
+          $("#import").hide();
+          $('.card').show();
+          $('#export').show();
+          showNextCard();
+        });
+        reader.readAsText(file);  // Start reading the file as text
+      }
+    });
+
+    // Show the next card
+    function showNextCard() {
+      const index = Math.floor(Math.random() * flashcards.length);
+      console.log(index)
+      // Retrieve the next flashcard from the list by random
+      const flashcard = flashcards[index];
+
+      // Update the HTML elements to display the new question and answer options
+      $('.card-front').text(flashcard.question);
+      $('.card-back').text(flashcard.answer);
     }
+
+    //event listener for arrow keys
+    $(document).keydown(function (event) {
+      //  37-left, 38- up, 39-right, 40-down
+      if (event.which == 38 || event.which == 40) {
+        $('.card').toggleClass('flipped');
+        updateScore(flashcards, $('.card-front').text());
+      } else if (event.which == 39) {
+        showNextCard_flipback();
+      }
+    });
+
+    //call next after flipping back if card is flipped
+    function showNextCard_flipback() {
+      if ($('.card').hasClass('flipped')) {
+          $('.card').removeClass('flipped');
+          setTimeout(function () {
+            showNextCard();
+          }, 200); //delay to flip back transison to complete
+        }
+        else {
+          showNextCard();
+        }
+    }
+    /* export the data to a json file and download.
+    */
     function exportJSONToFile(data, filename) {
-  // Convert the JSON data to a string
-  console.log("cl");
-  const jsonString = JSON.stringify(data, null, 2);
 
-  // Create a Blob object with the JSON data
-  const blob = new Blob([jsonString], { type: 'application/json' });
+      // Convert the JSON data to a string
+      const jsonString = JSON.stringify(data, null, 2);
 
-  // Create a temporary URL for the Blob
-  const url = URL.createObjectURL(blob);
+      // Create a Blob object with the JSON data
+      const blob = new Blob([jsonString], { type: 'application/json' });
 
-  // Create a temporary link element
-  const link = document.createElement('a');
-  link.href = url;
-  link.download = filename;
+      // Create a temporary URL for the Blob
+      const url = URL.createObjectURL(blob);
 
-  // Programmatically click the link to trigger the file download
-  document.body.appendChild(link);
-  link.click();
+      // Create a temporary link element
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = filename;
 
-  // Clean up the temporary objects
-  document.body.removeChild(link);
-  URL.revokeObjectURL(url);
-}
+      // Programmatically click the link to trigger the file download
+      document.body.appendChild(link);
+      link.click();
 
-function updateScore(jsonData, question) {
-  for (let i = 0; i < jsonData.length; i++) {
-    if (jsonData[i].question === question) {
-      jsonData[i].score += 1;
-      break;
+      // Clean up the temporary objects
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
     }
-  }
-}
-// Function to display the warning message
-function displayWarning(event) {
-  // Customize the warning message according to your needs
-  var message = "You have unsaved data,Export before you leave !";
-  
-  // Assign the warning message to the event object
-  event.returnValue = message;
-  
-  // Return the warning message for older browsers
-  return message;
-}
 
-// Attach the event listener to the 'beforeunload' event
-window.addEventListener('beforeunload', displayWarning);
+    /* change score variable of a entry in json*/
+    function updateScore(jsonData, question) {
+
+      for (let i = 0; i < jsonData.length; i++) {
+        if (jsonData[i].question === question) {
+          jsonData[i].score += 1;
+          break;
+        }
+      }
+    }
+
+    /* Function to display the warning message */
+    function displayWarning(event) {
+      // Customize the warning message according to your needs
+      var message = "You have unsaved data,Export before you leave !";
+
+      // Assign the warning message to the event object
+      event.returnValue = message;
+
+      // Return the warning message for older browsers
+      return message;
+    }
+
+    // Attach the event listener to the 'beforeunload' event
+    window.addEventListener('beforeunload', displayWarning);
 
 
-    </script>
+  </script>
 </body>
+
 </html>

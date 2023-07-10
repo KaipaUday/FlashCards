@@ -105,10 +105,12 @@
 
     $('.card').on('touchstart', function (event) {
       touchStartX = event.originalEvent.touches[0].clientX;
+      console.log(touchStartX);
     });
 
     $('.card').on('touchend', function (event) {
       touchEndX = event.originalEvent.changedTouches[0].clientX;
+      console.log(touchEndX);
 
       // Calculate the swipe distance
       var swipeDistance = touchEndX - touchStartX;
@@ -131,7 +133,7 @@
         reader.addEventListener('load', function () {
           const text = this.result;  // The contents of the file are stored in the 'result' property of the FileReader object
           flashcards = JSON.parse(text);
-          console.log(flashcards);
+          // console.log(flashcards);
           alert("file loaded");
           $("#import").hide();
           $('.card').show();
@@ -145,7 +147,7 @@
     // Show the next card
     function showNextCard() {
       const index = Math.floor(Math.random() * flashcards.length);
-      console.log(index)
+      // console.log(index)
       // Retrieve the next flashcard from the list by random
       const flashcard = flashcards[index];
 

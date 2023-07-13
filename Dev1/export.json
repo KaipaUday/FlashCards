@@ -1,0 +1,652 @@
+[
+  {
+    "question": "Beruf",
+    "answer": "Profession",
+    "score": 0
+  },
+  {
+    "question": "packungen",
+    "answer": "packs",
+    "score": 0
+  },
+  {
+    "question": "Freundschaft",
+    "answer": "Friendship",
+    "score": 0
+  },
+  {
+    "question": "Reisen",
+    "answer": "Travel",
+    "score": 0
+  },
+  {
+    "question": "Universität",
+    "answer": "university",
+    "score": 0
+  },
+  {
+    "question": "Erfahrung",
+    "answer": "Experience",
+    "score": 0
+  },
+  {
+    "question": "Schwierig",
+    "answer": "Difficult",
+    "score": 0
+  },
+  {
+    "question": "Glücklich",
+    "answer": "Happy",
+    "score": 0
+  },
+  {
+    "question": "Interessant",
+    "answer": "Interesting",
+    "score": 0
+  },
+  {
+    "question": "Verantwortung",
+    "answer": "Responsibility",
+    "score": 0
+  },
+  {
+    "question": "Beziehung",
+    "answer": "Relationship",
+    "score": 0
+  },
+  {
+    "question": "Gesellschaft",
+    "answer": "Company",
+    "score": 0
+  },
+  {
+    "question": "Kultur",
+    "answer": "Culture",
+    "score": 0
+  },
+  {
+    "question": "Sprache",
+    "answer": "Language",
+    "score": 0
+  },
+  {
+    "question": "Fortschritt",
+    "answer": "Progress",
+    "score": 0
+  },
+  {
+    "question": "Herausforderung",
+    "answer": "Challenge",
+    "score": 0
+  },
+  {
+    "question": "Entscheidung",
+    "answer": "Decision",
+    "score": 0
+  },
+  {
+    "question": "Verständnis",
+    "answer": "Understanding",
+    "score": 0
+  },
+  {
+    "question": "Entwicklung",
+    "answer": "Development",
+    "score": 0
+  },
+  {
+    "question": "Möglichkeiten",
+    "answer": "Possibilities",
+    "score": 0
+  },
+  {
+    "question": "Kommunikation",
+    "answer": "communication",
+    "score": 0
+  },
+  {
+    "question": "Leidenschaft",
+    "answer": "Passion",
+    "score": 0
+  },
+  {
+    "question": "Gesundheit",
+    "answer": "Health",
+    "score": 0
+  },
+  {
+    "question": "Umwelt",
+    "answer": "Environment",
+    "score": 0
+  },
+  {
+    "question": "Technologie",
+    "answer": "technology",
+    "score": 0
+  },
+  {
+    "question": "Erinnerung",
+    "answer": "Memory",
+    "score": 0
+  },
+  {
+    "question": "Gelegenheit",
+    "answer": "Opportunity",
+    "score": 0
+  },
+  {
+    "question": "Erfolg",
+    "answer": "Success",
+    "score": 0
+  },
+  {
+    "question": "Veränderung",
+    "answer": "change",
+    "score": 0
+  },
+  {
+    "question": "Wissenschaft",
+    "answer": "Science",
+    "score": 0
+  },
+  {
+    "question": "Fähigkeit",
+    "answer": "Capability",
+    "score": 0
+  },
+  {
+    "question": "Wirtschaft",
+    "answer": "Business",
+    "score": 0
+  },
+  {
+    "question": "Natürlich",
+    "answer": "Naturally",
+    "score": 0
+  },
+  {
+    "question": "Zufriedenheit",
+    "answer": "satisfaction",
+    "score": 0
+  },
+  {
+    "question": "Vertrauen",
+    "answer": "Trust",
+    "score": 0
+  },
+  {
+    "question": "Aufregend",
+    "answer": "Exciting",
+    "score": 0
+  },
+  {
+    "question": "Leistung",
+    "answer": "Performance",
+    "score": 0
+  },
+  {
+    "question": "Entdecken",
+    "answer": "Discover",
+    "score": 0
+  },
+  {
+    "question": "Verstehen",
+    "answer": "Understand",
+    "score": 0
+  },
+  {
+    "question": "Erneuerbar",
+    "answer": "Renewable",
+    "score": 0
+  },
+  {
+    "question": "Zusammenarbeit",
+    "answer": "Cooperation",
+    "score": 0
+  },
+  {
+    "question": "Verantwortungsbewusst",
+    "answer": "Responsible",
+    "score": 0
+  },
+  {
+    "question": "Unterstützung",
+    "answer": "Support",
+    "score": 0
+  },
+  {
+    "question": "Vielfalt",
+    "answer": "diversity",
+    "score": 0
+  },
+  {
+    "question": "Herausragend",
+    "answer": "Outstanding",
+    "score": 0
+  },
+  {
+    "question": "Ausdruck",
+    "answer": "Expression",
+    "score": 0
+  },
+  {
+    "question": "Zusammenhang",
+    "answer": "Connection",
+    "score": 0
+  },
+  {
+    "question": "Entschlossenheit",
+    "answer": "determination",
+    "score": 0
+  },
+  {
+    "question": "Energie",
+    "answer": "energy",
+    "score": 0
+  },
+  {
+    "question": "Gemeinschaft",
+    "answer": "Community",
+    "score": 0
+  },
+  {
+    "question": "Überzeugung",
+    "answer": "conviction",
+    "score": 0
+  },
+  {
+    "question": "Leidenschaftlich",
+    "answer": "Passionate",
+    "score": 0
+  },
+  {
+    "question": "Herausfordernd",
+    "answer": "Challenging",
+    "score": 0
+  },
+  {
+    "question": "Ermutigung",
+    "answer": "encouragement",
+    "score": 0
+  },
+  {
+    "question": "Nachhaltigkeit",
+    "answer": "sustainability",
+    "score": 0
+  },
+  {
+    "question": "Verständigung",
+    "answer": "understanding",
+    "score": 0
+  },
+  {
+    "question": "Bemerkenswert",
+    "answer": "Remarkable",
+    "score": 0
+  },
+  {
+    "question": "Erkunden",
+    "answer": "Explore",
+    "score": 0
+  },
+  {
+    "question": "Einfluss",
+    "answer": "Influence",
+    "score": 0
+  },
+  {
+    "question": "Empathie",
+    "answer": "empathy",
+    "score": 0
+  },
+  {
+    "question": "Gerechtigkeit",
+    "answer": "justice",
+    "score": 0
+  },
+  {
+    "question": "Kooperation",
+    "answer": "cooperation",
+    "score": 0
+  },
+  {
+    "question": "Entschlossen",
+    "answer": "Determined",
+    "score": 0
+  },
+  {
+    "question": "Beharrlichkeit",
+    "answer": "persistence",
+    "score": 0
+  },
+  {
+    "question": "Kreativität",
+    "answer": "creativity",
+    "score": 0
+  },
+  {
+    "question": "Initiative",
+    "answer": "initiative",
+    "score": 0
+  },
+  {
+    "question": "Anpassungsfähig",
+    "answer": "Adaptable",
+    "score": 0
+  },
+  {
+    "question": "Innovativ",
+    "answer": "Innovative",
+    "score": 0
+  },
+  {
+    "question": "Aufmerksamkeit",
+    "answer": "Attention",
+    "score": 0
+  },
+  {
+    "question": "Rücksichtnahme",
+    "answer": "thoughtfulness",
+    "score": 0
+  },
+  {
+    "question": "Lebendig",
+    "answer": "Lively",
+    "score": 0
+  },
+  {
+    "question": "Aufgeschlossen",
+    "answer": "Open minded",
+    "score": 0
+  },
+  {
+    "question": "Visionär",
+    "answer": "Visionary",
+    "score": 0
+  },
+  {
+    "question": "Neugierig",
+    "answer": "Curious",
+    "score": 0
+  },
+  {
+    "question": "Großzügig",
+    "answer": "Generous",
+    "score": 0
+  },
+  {
+    "question": "Achtsamkeit",
+    "answer": "Mindfulness",
+    "score": 0
+  },
+  {
+    "question": "Zusammenhalt",
+    "answer": "cohesion",
+    "score": 0
+  },
+  {
+    "question": "Gleichberechtigung",
+    "answer": "equal rights",
+    "score": 0
+  },
+  {
+    "question": "Verantwortungsvoll",
+    "answer": "Responsible",
+    "score": 0
+  },
+  {
+    "question": "Ehrgeizig",
+    "answer": "Ambitious",
+    "score": 0
+  },
+  {
+    "question": "Respektvoll",
+    "answer": "Respectful",
+    "score": 0
+  },
+  {
+    "question": "beim Weiterlernen",
+    "answer": "When learning",
+    "score": 0
+  },
+  {
+    "question": "vorstellung",
+    "answer": "performance",
+    "score": 0
+  },
+  {
+    "question": "beratung",
+    "answer": "advice",
+    "score": 0
+  },
+  {
+    "question": "sprechtag",
+    "answer": "speaking day",
+    "score": 0
+  },
+  {
+    "question": "schach",
+    "answer": "chess",
+    "score": 0
+  },
+  {
+    "question": "gemeinsames",
+    "answer": "common",
+    "score": 0
+  },
+  {
+    "question": "sprachtreff",
+    "answer": "speech meeting",
+    "score": 0
+  },
+  {
+    "question": "netzpolitik",
+    "answer": "network policy",
+    "score": 0
+  },
+  {
+    "question": "politik",
+    "answer": "politics",
+    "score": 0
+  },
+  {
+    "question": "sprecherin",
+    "answer": "spokeswoman",
+    "score": 0
+  },
+  {
+    "question": "bereitung",
+    "answer": "preparation",
+    "score": 0
+  },
+  {
+    "question": "die zeitung",
+    "answer": "the newspaper",
+    "score": 0
+  },
+  {
+    "question": "komödie",
+    "answer": "comedy",
+    "score": 0
+  },
+  {
+    "question": "lieb",
+    "answer": "dear",
+    "score": 0
+  },
+  {
+    "question": "backen",
+    "answer": "bake",
+    "score": 0
+  },
+  {
+    "question": "kekse",
+    "answer": "cookies",
+    "score": 0
+  },
+  {
+    "question": "sei",
+    "answer": "may be",
+    "score": 0
+  },
+  {
+    "question": "nichte",
+    "answer": "niece",
+    "score": 0
+  },
+  {
+    "question": "ferien",
+    "answer": "holidays",
+    "score": 0
+  },
+  {
+    "question": "feieren",
+    "answer": "celebrate",
+    "score": 0
+  },
+  {
+    "question": "das gepäck",
+    "answer": "the luggage",
+    "score": 0
+  },
+  {
+    "question": "der abflug",
+    "answer": "the takeoff",
+    "score": 0
+  },
+  {
+    "question": "abfahrt",
+    "answer": "Departure",
+    "score": 0
+  },
+  {
+    "question": "blumenladen",
+    "answer": "flower shop",
+    "score": 0
+  },
+  {
+    "question": "bioladen",
+    "answer": "organic shop",
+    "score": 0
+  },
+  {
+    "question": "jemand",
+    "answer": "someone",
+    "score": 0
+  },
+  {
+    "question": "bald",
+    "answer": "soon",
+    "score": 0
+  },
+  {
+    "question": "holt",
+    "answer": "get",
+    "score": 0
+  },
+  {
+    "question": "wiederkommen",
+    "answer": "come back",
+    "score": 0
+  },
+  {
+    "question": "ausschlafen",
+    "answer": "sleep in",
+    "score": 0
+  },
+  {
+    "question": "strand",
+    "answer": "beach",
+    "score": 0
+  },
+  {
+    "question": "wem",
+    "answer": "whom",
+    "score": 0
+  },
+  {
+    "question": "denn",
+    "answer": "then",
+    "score": 0
+  },
+  {
+    "question": "dann",
+    "answer": "then",
+    "score": 0
+  },
+  {
+    "question": "wenn",
+    "answer": "if",
+    "score": 0
+  },
+  {
+    "question": "wann",
+    "answer": "When",
+    "score": 0
+  },
+  {
+    "question": "unordentlich",
+    "answer": "messy",
+    "score": 0
+  },
+  {
+    "question": "verärgert",
+    "answer": "annoyed",
+    "score": 0
+  },
+  {
+    "question": "miete",
+    "answer": "rent",
+    "score": 0
+  },
+  {
+    "question": "kassenzettel",
+    "answer": "Bill",
+    "score": 0
+  },
+  {
+    "question": "genug",
+    "answer": "enough",
+    "score": 0
+  },
+  {
+    "question": "gebrochen",
+    "answer": "Broken",
+    "score": 0
+  },
+  {
+    "question": "hilfreich",
+    "answer": "helpful",
+    "score": 0
+  },
+  {
+    "question": "ehefrau",
+    "answer": "wife",
+    "score": 0
+  },
+  {
+    "question": "ehemann",
+    "answer": "husband",
+    "score": 0
+  },
+  {
+    "question": "unhöflich",
+    "answer": "impolite",
+    "score": 0
+  },
+  {
+    "question": "leer",
+    "answer": "empty",
+    "score": 0
+  },
+  {
+    "question": "leiser",
+    "answer": "quieter",
+    "score": 0
+  },
+  {
+    "question": "pflanzen",
+    "answer": "plan",
+    "score": 0
+  }
+]

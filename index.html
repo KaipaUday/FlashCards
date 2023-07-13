@@ -102,7 +102,7 @@
     var touchStartX = 0;
     var touchEndX = 0;
     var minSwipeDistance = 50; // Minimum distance required to trigger swipe action
-
+    var viewed_word;
     $('.card').on('touchstart', function (event) {
       touchStartX = event.originalEvent.touches[0].clientX;
     });
@@ -213,13 +213,16 @@
 
     /* change score variable of a entry in json*/
     function updateScore(jsonData, question) {
-
+      if (viewed_word === question) {
+        return
+      }
       for (let i = 0; i < jsonData.length; i++) {
         if (jsonData[i].question === question) {
           jsonData[i].score += 1;
           break;
         }
       }
+      viewed_word=question;
     }
 
     /* Function to display the warning message */
